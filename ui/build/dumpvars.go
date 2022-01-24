@@ -164,12 +164,13 @@ var BannerVars = []string{
 	"PRODUCT_SOONG_NAMESPACES",
 	"SOONG_SDK_SNAPSHOT_PREFER",
 	"SOONG_SDK_SNAPSHOT_VERSION",
+	"PLATFORM_NORTICAL_RELEASE",
 }
 
 func Banner(make_vars map[string]string) string {
 	b := &bytes.Buffer{}
 
-	fmt.Fprintln(b, "============================================")
+	fmt.Fprintln(b, "===========Nortical Build System===========")
 	for _, name := range BannerVars {
 		if make_vars[name] != "" {
 			fmt.Fprintf(b, "%s=%s\n", name, make_vars[name])
